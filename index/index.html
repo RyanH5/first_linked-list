@@ -2,12 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="../css/normalize.css">
+    <title tabindex="1">Linked List</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
-    </head>
-    <body>
+  </head>
+  <body>
+    <section class="left">
+      <label for="Linked List Logo" tabindex="2"></label>
+        <h1 class="heading">Linked<span><img src="../css/linked-list-logo.svg" alt="Linked List Logo" height="52px" width="104px" class="carabiners"></span>List</h1> 
+    <!-- <label for="web-form"></label> -->
+      <form id="web-form" role="form">
+        <label for="web-title"></label>
+          <input type="text" name="Website Title" class="input-fields" id="web-title" tabindex="3" placeholder="Website Title">          
+        <label for="Web-url"></label>
+          <input type="text" aria-describedby="Website URL" class="input-fields" id="web-url" tabindex="4" placeholder="Website URL">  
+        <input type="submit" name="Enter" value="Enter" id="web-submit" tabindex="5">
+      </form>  
+    </section>
+    <section class="right">
+      <ul class="bookmark-ul">
+        <li class="site-info-li">
+          <h2 class="site-title">The Website Title</h2>
+          <hr class="site-break">
+          <a href="#" target="_blank" alt="#">www.google.com</a>
+          <hr class="site-break">
+          <button class="site-btn" id="site-read">Read</button>
+          <button class="site-btn" id="site-delete">Delete</button>
+        </li>      
+      </ul>
+    </section>
     <script type="text/javascript" src="../script/script.js"></script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
