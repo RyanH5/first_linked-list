@@ -1,3 +1,106 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #D0D8DC;
+  margin: 0;
 }
+
+/*Left Side*/
+
+h1 {
+  color: #FFFFFF;
+  font-size: 70px;
+  width: 100%;
+  text-align: center;
+}
+
+.carabiners {
+  line-height: 40px;
+}
+
+.left {
+  background-color: #495A63;
+  width: 49.5%;
+}
+
+#web-title {
+  display: block;
+
+}
+
+/*Page Setup*/
+
+.left, 
+.right {
+  display: inline-block;
+  height: 100vh;
+  margin: auto;
+}
+
+/*Right Side */
+
+.right {
+  width: 50%;
+  float: right;
+}
+
+.bookmark-ul {
+/*  margin: 10px auto;*/
+  padding-left: 0;
+}
+
+.site-info-li {
+  border: 2px solid #657C89;
+  background-color: #FFFFFF;
+  margin: 26px auto;
+  list-style: none;
+  width: 583px;
+  height: 207px;
+  color: ;
+}
+
+.site-break {
+  margin: 28px 35px;
+}
+
+.site-btn {
+  font-size: 13px;
+}
+
+#site-read {
+  position: relative;
+  left: 26px;
+}
+
+h2 {
+  font-weight: 800;
+  padding-left: 36px;
+  color: #495A63;
+  margin-bottom: 2px;
+}
+
+a {
+  padding-left: 36px;
+  font-size: 28px;
+}
+
+#site-delete {
+  float: right;
+  margin-right: 5%;
+}
+
+
+@media (max-width: 900px) {
+  .left,
+  .right {
+    width:100%;
+  }
+}
+
+
+
