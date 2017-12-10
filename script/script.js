@@ -6,6 +6,7 @@ var urlFld = document.querySelector('#web-url');
 var displayTitle = document.querySelector('#site-title');
 var displayUrl = document.querySelector('#web-url');
 var bookmarkUl = document.querySelector('#bookmark-ul-id');
+var read = document.querySelector('#site-read');
 
 submitBtn.addEventListener('click', function(e) {
   e.preventDefault();
@@ -20,7 +21,9 @@ submitBtn.addEventListener('click', function(e) {
   bookmarkUl.appendChild(siteLi);
 })
 
-
+read.addEventListener('click', function() {
+  read.classList.add('read');
+})
 
 };
 
