@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   background-color: #D0D8DC;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
@@ -15,8 +15,8 @@ body {
 h1 {
   color: #FFFFFF;
   font-size: 70px;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .carabiners {
@@ -30,7 +30,6 @@ h1 {
 
 #web-title {
   display: block;
-
 }
 
 /*Page Setup*/
@@ -45,55 +44,64 @@ h1 {
 /*Right Side */
 
 .right {
-  width: 50%;
   float: right;
+  width: 50%;
 }
 
 .bookmark-ul {
-/*  margin: 10px auto;*/
   padding-left: 0;
 }
 
 .site-info-li {
   border: 2px solid #657C89;
   background-color: #FFFFFF;
-  margin: 26px auto;
-  list-style: none;
-  width: 583px;
   height: 207px;
-  color: ;
+  list-style: none;
+  margin: 26px auto;
+  padding: 8px 19px 19px 20px;
+  width: 583px;
 }
 
-.site-break {
-  margin: 28px 35px;
+h2 {
+  color: #3D5059;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin: 0;
+}
+
+#top-site-break {
+  margin-bottom: 23px;
+  margin-top: 9px;
+}
+
+a {
+  color: #3D5059;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+#bottom-site-break {
+  margin-top: 28px;
 }
 
 .site-btn {
-  font-size: 13px;
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  color: #3D5059;
+  cursor:pointer;
+  font-size: 19px;
+  outline:none;
+  overflow: hidden;
 }
 
 #site-read {
   position: relative;
-  left: 26px;
-}
-
-h2 {
-  font-weight: 800;
-  padding-left: 36px;
-  color: #495A63;
-  margin-bottom: 2px;
-}
-
-a {
-  padding-left: 36px;
-  font-size: 28px;
 }
 
 #site-delete {
   float: right;
-  margin-right: 5%;
 }
-
 
 @media (max-width: 900px) {
   .left,
