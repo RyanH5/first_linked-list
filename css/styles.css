@@ -14,9 +14,10 @@ body {
 
 h1 {
   color: #FFFFFF;
-  font-size: 70px;
-  width: 100%;
+  font-size: 73px;
+  margin-top: 252px;
   text-align: center;
+  width: 100%;
 }
 
 .carabiners {
@@ -30,7 +31,34 @@ h1 {
 
 #web-title {
   display: block;
+  font-size: 30px;
+  height:61px;
+  margin-left: 6%;
+  padding-left: 19px;
+  width: 90%;
 
+}
+
+#web-url {
+  display: block;
+  font-size: 30px;
+  height: 61px;
+  margin-top: 61px;
+  margin-left: 6%;
+  padding-left: 19px;
+  width: 90%;
+}
+
+#web-submit {
+  width: 90%;
+  height: 61px;
+  margin-top: 61px;
+  margin-left: 6%;
+  border-radius: 0;
+  background-color: #F7C244;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 /*Page Setup*/
