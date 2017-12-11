@@ -16,10 +16,12 @@
           <input type="text" name="Website Title" class="input-fields" id="web-title" tabindex="3" placeholder="Website Title">          
         <label for="Web-url"></label>
           <input type="text" aria-describedby="Website URL" class="input-fields" id="web-url" tabindex="4" placeholder="Website URL">  
-        <input type="submit" name="Enter" value="Enter" id="web-submit" tabindex="5">
-      </form>  
+        <input type="submit" name="Enter" value="Enter" id="web-submit" tabindex="5" disabled="true">
+      </form> 
+
     </section>
     <section class="right">
+      <p id="error">Please Add Websites</p>
       <ul class="bookmark-ul" id="bookmark-ul-id">
         <li class="site-info-li" id="site-li">
           <h2 class="site-title">The Website Title</h2>
@@ -31,8 +33,7 @@
         </li>     
       </ul>
     </section>
-    <script type="text/javascript" src="../script/script.js"></script>
     <script type="text/javascript" src="../script/jquery-3.2.1.js"></script>
-
+    <script type="text/javascript" src="../script/script.js"></script>
   </body>
 </html>
