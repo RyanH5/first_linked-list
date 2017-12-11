@@ -1,12 +1,13 @@
-window.onload = function () {
+// window.onload = function () {
  
 var submitBtn = document.querySelector('#web-submit');
 var titleFld = document.querySelector('#web-title');
 var urlFld = document.querySelector('#web-url');
-var displayTitle = document.querySelector('#site-title');
-var displayUrl = document.querySelector('#web-url');
+var displayTitle = document.querySelector('#site-title'); // Can delete after dynamic is 100%
 var bookmarkUl = document.querySelector('#bookmark-ul-id');
-var read = document.querySelector('#site-read');
+var readBtn = document.querySelector('#site-read');
+var deleteBtn = document.querySelector('#site-delete');
+var errorMessage = document.querySelector('#error');
 
 submitBtn.addEventListener('click', function(e) {
   e.preventDefault();
@@ -21,11 +22,44 @@ submitBtn.addEventListener('click', function(e) {
   bookmarkUl.appendChild(siteLi);
 })
 
-read.addEventListener('click', function() {
-  read.classList.add('read');
-})
+// readBtn.addEventListener('click', function() {
+//   readBtn.classList.add('read');
+// })
 
-};
+$('ul').on('click', '#site-read', function(event) {
+    $(this).addClass( 'read' );
+});
+
+
+$('ul').on('click', '#site-delete', function(event) {
+  //console.log(event);
+  $(this).closest('li').fadeOut(function() {
+    $(this).remove();
+  });
+});
+
+urlFld.addEventListener('keyup', function() {
+  if (titleFld.value === '' || urlFld.value === '') {
+    submitBtn.disabled = true;
+    errorMessage.innerText = "Please fill out both fields";
+  } else {
+    submitBtn.disabled = false;
+    errorMessage.innerText = "";
+  }  
+});
+
+titleFld.addEventListener('keyup', function() {
+  if (titleFld.value === '' || urlFld.value === '') {
+    submitBtn.disabled = true;
+    errorMessage.innerText = "Please fill out both fields";
+  } else {
+    submitBtn.disabled = false;
+    errorMessage.innerText = "";
+  }  
+});
+
+
+
 
 
 
