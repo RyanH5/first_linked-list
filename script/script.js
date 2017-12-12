@@ -8,6 +8,7 @@ var bookmarkUl = document.querySelector('#bookmark-ul-id');
 var readBtn = document.querySelector('#site-read');
 var deleteBtn = document.querySelector('#site-delete');
 var errorMessage = document.querySelector('#error');
+var readCountDisplay = document.querySelector('#read-display');
 
 submitBtn.addEventListener('click', function(e) {
   e.preventDefault();
@@ -29,6 +30,7 @@ submitBtn.addEventListener('click', function(e) {
 
 $('ul').on('click', '#site-read', function(event) {
     $(this).toggleClass('read');
+    $(this).closest('li').addClass('readli');
     readCount();
 });
 
@@ -46,8 +48,20 @@ urlFld.addEventListener('keyup', function() {
   } else {
     submitBtn.disabled = false;
     errorMessage.innerText = "";
-  }  
+  }
+  checkMeNow();
 });
+
+function checkMeNow() {
+    var check = urlFld.value;
+    var x = check.includes('.com');
+    if (x === false) {
+      submitBtn.disabled = true;
+    } else {
+      submitBtn.disabled = false;
+    }  
+};
+
 
 titleFld.addEventListener('keyup', function() {
   if (titleFld.value === '' || urlFld.value === '') {
@@ -66,10 +80,8 @@ function count() {
 
 function readCount() {
   var readNum = $(".read").length;
-  errorMessage.innerText = "You have read " + readNum + " of your bookmarks";
+  readCountDisplay.innerText = "You have read " + readNum + " of your bookmarks";
 }
-
-
 
 
 
