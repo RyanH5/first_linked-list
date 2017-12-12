@@ -18,8 +18,9 @@ submitBtn.addEventListener('click', function(e) {
   siteLi.innerHTML = "<h2 class='site-title'>" + newTitle + 
     "</h2><hr id='top-site-break'><a href=" + newUrl + 
     "target='_blank' alt='#'>" + newUrl +
-    "</a><hr id='bottom-site-break'><button class='site-btn' id='site-read'>Read</button><button class='site-btn' id='site-delete'>Delete</button>"
+    "</a><hr id='bottom-site-break'><button class='site-btn' id='site-read'>Read</button><button class='site-btn delete-count' id='site-delete'>Delete</button>"
   bookmarkUl.appendChild(siteLi);
+  count();
 })
 
 // readBtn.addEventListener('click', function() {
@@ -27,15 +28,15 @@ submitBtn.addEventListener('click', function(e) {
 // })
 
 $('ul').on('click', '#site-read', function(event) {
-    $(this).addClass( 'read' );
+    $(this).toggleClass('read');
+    readCount();
 });
 
-
 $('ul').on('click', '#site-delete', function(event) {
-  //console.log(event);
   $(this).closest('li').fadeOut(function() {
     $(this).remove();
   });
+  count();
 });
 
 urlFld.addEventListener('keyup', function() {
@@ -57,6 +58,16 @@ titleFld.addEventListener('keyup', function() {
     errorMessage.innerText = "";
   }  
 });
+
+function count() { 
+  var deleteNum = $(".delete-count").length;
+  errorMessage.innerText = "You have " + deleteNum + " bookmarks on the page";
+}
+
+function readCount() {
+  var readNum = $(".read").length;
+  errorMessage.innerText = "You have read " + readNum + " of your bookmarks";
+}
 
 
 
