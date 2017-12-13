@@ -1,5 +1,3 @@
-// window.onload = function () {
- 
 var submitBtn = document.querySelector('#web-submit');
 var titleFld = document.querySelector('#web-title');
 var urlFld = document.querySelector('#web-url');
