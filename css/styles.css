@@ -71,6 +71,27 @@ h1 {
 
 /*Right Side */
 
+.card-count {
+  border: 5px solid #F7C244;
+  height: 80px;
+  margin: 26px auto;
+  padding: 10px 12px;
+  width: 50%;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #455A64;
+}
+
+#error,
+#read-display {
+  margin: 0px;
+  font-weight: 800;
+}
+
+#read-display {
+  padding-top: 4px;
+}
+
 .right {
   float: right;
   width: 50%;
@@ -88,7 +109,7 @@ h1 {
   list-style: none;
   margin: 26px auto;
   padding: 8px 19px 19px 20px;
-  width: 583px;
+  width: 80%;
 }
 
 h2 {
@@ -109,8 +130,14 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+#site-read:hover {
+  text-decoration: underline solid #FFC107;
+  font-weight: 800;
+}
 
+#site-delete:hover {
+  text-decoration: underline solid #FFC107;
 }
 
 #bottom-site-break {
@@ -168,6 +195,24 @@ a:hover {
   #web-submit {
     margin-top: 37px;
     margin-bottom: 37px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-count {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .heading {
+    margin-top: 122px;
+  }
+}
+
+@media (max-width: 440px) {
+  .card-count {
+    width: 80%;
   }
 }
 

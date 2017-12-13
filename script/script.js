@@ -21,12 +21,10 @@ submitBtn.addEventListener('click', function(e) {
     "target='_blank' alt='#'>" + newUrl +
     "</a><hr id='bottom-site-break'><button class='site-btn' id='site-read'>Read</button><button class='site-btn delete-count' id='site-delete'>Delete</button>"
   bookmarkUl.appendChild(siteLi);
-  count();
+  readCountDisplay.innerText = '';
+  deleteCount();
 })
 
-// readBtn.addEventListener('click', function() {
-//   readBtn.classList.add('read');
-// })
 
 $('ul').on('click', '#site-read', function(event) {
     $(this).toggleClass('read');
@@ -37,8 +35,9 @@ $('ul').on('click', '#site-read', function(event) {
 $('ul').on('click', '#site-delete', function(event) {
   $(this).closest('li').fadeOut(function() {
     $(this).remove();
+    deleteCount();
+    readCount();
   });
-  count();
 });
 
 urlFld.addEventListener('keyup', function() {
@@ -54,14 +53,13 @@ urlFld.addEventListener('keyup', function() {
 
 function checkMeNow() {
     var check = urlFld.value;
-    var x = check.includes('.com');
+    var x = check.includes('.com' || '.org' || '.edu' || '.gov' || '.io' || '.ca' || '.uk');
     if (x === false) {
       submitBtn.disabled = true;
     } else {
       submitBtn.disabled = false;
     }  
 };
-
 
 titleFld.addEventListener('keyup', function() {
   if (titleFld.value === '' || urlFld.value === '') {
@@ -73,14 +71,20 @@ titleFld.addEventListener('keyup', function() {
   }  
 });
 
-function count() { 
+function deleteCount() {
   var deleteNum = $(".delete-count").length;
-  errorMessage.innerText = "You have " + deleteNum + " bookmarks on the page";
+    for (var i = deleteNum.length; i >= 0; i--) {
+      deleteNum = deleteNum[i]; 
+    }
+  errorMessage.innerText = deleteNum + " Bookmarks to Read";
 }
 
 function readCount() {
   var readNum = $(".read").length;
-  readCountDisplay.innerText = "You have read " + readNum + " of your bookmarks";
+    for (var i = 0; i < readNum.length; i++) {
+      readNum = readNum[i];
+    }
+  readCountDisplay.innerText = readNum + " Bookmarks are Read";
 }
 
 
