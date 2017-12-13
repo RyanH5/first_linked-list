@@ -23,7 +23,6 @@ submitBtn.addEventListener('click', function(e) {
   deleteCount();
 })
 
-
 $('ul').on('click', '#site-read', function(event) {
     $(this).toggleClass('read');
     $(this).closest('li').addClass('readli');
