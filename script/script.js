@@ -1,5 +1,3 @@
-// window.onload = function () {
- 
 var submitBtn = document.querySelector('#web-submit');
 var titleFld = document.querySelector('#web-title');
 var urlFld = document.querySelector('#web-url');
@@ -52,13 +50,13 @@ urlFld.addEventListener('keyup', function() {
 });
 
 function checkMeNow() {
-    var check = urlFld.value;
-    var x = check.includes('.com' || '.org' || '.edu' || '.gov' || '.io' || '.ca' || '.uk');
-    if (x === false) {
-      submitBtn.disabled = true;
-    } else {
-      submitBtn.disabled = false;
-    }  
+  var check = urlFld.value;
+  var x = check.includes('.com' || '.org' || '.edu' || '.gov' || '.io' || '.ca' || '.uk');
+  if (x === false) {
+    submitBtn.disabled = true;
+  } else {
+    submitBtn.disabled = false;
+  }  
 };
 
 titleFld.addEventListener('keyup', function() {

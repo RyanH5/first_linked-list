@@ -49,15 +49,15 @@ h1 {
 }
 
 #web-submit {
-  width: 90%;
+  background-color: #F7C244;
+  border-radius: 0;  
+  color: #FFFFFF;
   height: 61px;
+  font-size: 18px;
+  font-weight: 800;  
   margin-top: 61px;
   margin-left: 6%;
-  border-radius: 0;
-  background-color: #F7C244;
-  color: #FFFFFF;
-  font-weight: 800;
-  font-size: 18px;
+  width: 90%;
 }
 
 /*Page Setup*/
@@ -72,20 +72,20 @@ h1 {
 /*Right Side */
 
 .card-count {
+  background-color: #FFFFFF; 
   border: 5px solid #F7C244;
-  height: 80px;
+  color: #455A64; 
+  height: 80px; 
   margin: 26px auto;
-  padding: 10px 12px;
-  width: 50%;
+  padding: 10px 12px;   
   text-align: center;
-  background-color: #FFFFFF;
-  color: #455A64;
+  width: 50%;
 }
 
 #error,
 #read-display {
-  margin: 0px;
   font-weight: 800;
+  margin: 0px;
 }
 
 #read-display {
@@ -94,8 +94,8 @@ h1 {
 
 .right {
   float: right;
+  overflow-y: scroll;  
   width: 50%;
-  overflow-y: scroll;
 }
 
 .bookmark-ul {
@@ -103,8 +103,8 @@ h1 {
 }
 
 .site-info-li {
-  border: 2px solid #657C89;
   background-color: #FFFFFF;
+  border: 2px solid #657C89; 
   height: 207px;
   list-style: none;
   margin: 26px auto;
@@ -132,8 +132,8 @@ a {
 
 a:hover,
 #site-read:hover {
-  text-decoration: underline solid #FFC107;
   font-weight: 800;
+  text-decoration: underline solid #FFC107;
 }
 
 #site-delete:hover {
