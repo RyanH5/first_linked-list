@@ -48,7 +48,7 @@ urlField.addEventListener('keyup', function() {
 });
 
 function checkMeNow() {
-  var check = urlFld.value;
+  var check = urlField.value;
   var x = check.includes('.com' || '.org' || '.edu' || '.gov' || '.io' || '.ca' || '.uk');
   if (x === false) {
     submitBtn.disabled = true;
