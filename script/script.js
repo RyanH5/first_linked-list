@@ -48,13 +48,13 @@ urlField.addEventListener('keyup', function() {
 });
 
 function checkMeNow() {
-    var check = urlField.value;
-    var x = check.includes('.com' || '.org' || '.edu' || '.gov' || '.io' || '.ca' || '.uk');
-    if (x === false) {
-      submitBtn.disabled = true;
-    } else {
-      submitBtn.disabled = false;
-    }  
+  var check = urlFld.value;
+  var x = check.includes('.com' || '.org' || '.edu' || '.gov' || '.io' || '.ca' || '.uk');
+  if (x === false) {
+    submitBtn.disabled = true;
+  } else {
+    submitBtn.disabled = false;
+  }  
 };
 
 titleField.addEventListener('keyup', function() {
