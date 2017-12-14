@@ -73,5 +73,6 @@ We made it halfway through phase 4. We attempted to do URL validation but hit a 
 1. We attempted ARIA using semantic tags, label for and tab indexes. 
 2. We idiomatically ordered CSS from top to bottom in the left column, then in the right column, then media queries at bottom. 
 3. We wrapped our aria labels around their elements. 
-4. We formatted our Javascript well. We used jQuery for DOM manipulation, and Vanilla for everything else. We have one function greater than 8 lines. We used 9 global variables. This is good for us, but we will refactor more in the future. 
+4. We formatted our Javascript well. We used jQuery for DOM manipulation, and Vanilla for everything else. We have one function greater than 8 lines. We used 9 global variables. This is good for us, but we will refactor more in the future.
+5. We are awesome. made for git. lol
 
