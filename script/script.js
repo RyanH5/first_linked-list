@@ -1,7 +1,6 @@
 var submitBtn = document.querySelector('#web-submit');
-var titleFld = document.querySelector('#web-title');
-var urlFld = document.querySelector('#web-url');
-var displayTitle = document.querySelector('#site-title'); // Can delete after dynamic is 100%
+var titleField = document.querySelector('#web-title');
+var urlField = document.querySelector('#web-url');
 var bookmarkUl = document.querySelector('#bookmark-ul-id');
 var readBtn = document.querySelector('#site-read');
 var deleteBtn = document.querySelector('#site-delete');
@@ -10,8 +9,8 @@ var readCountDisplay = document.querySelector('#read-display');
 
 submitBtn.addEventListener('click', function(e) {
   e.preventDefault();
-  var newTitle = titleFld.value;
-  var newUrl = urlFld.value;
+  var newTitle = titleField.value;
+  var newUrl = urlField.value;
   var siteLi = document.createElement('li');
   siteLi.className = 'site-info-li';
   siteLi.innerHTML = "<h2 class='site-title'>" + newTitle + 
@@ -23,13 +22,13 @@ submitBtn.addEventListener('click', function(e) {
   deleteCount();
 })
 
-$('ul').on('click', '#site-read', function(event) {
+$('ul').on('click', '#site-read', function(e) {
     $(this).toggleClass('read');
     $(this).closest('li').addClass('readli');
     readCount();
 });
 
-$('ul').on('click', '#site-delete', function(event) {
+$('ul').on('click', '#site-delete', function(e) {
   $(this).closest('li').fadeOut(function() {
     $(this).remove();
     deleteCount();
@@ -37,8 +36,8 @@ $('ul').on('click', '#site-delete', function(event) {
   });
 });
 
-urlFld.addEventListener('keyup', function() {
-  if (titleFld.value === '' || urlFld.value === '') {
+urlField.addEventListener('keyup', function() {
+  if (titleField.value === '' || urlField.value === '') {
     submitBtn.disabled = true;
     errorMessage.innerText = "Please fill out both fields";
   } else {
@@ -58,8 +57,8 @@ function checkMeNow() {
   }  
 };
 
-titleFld.addEventListener('keyup', function() {
-  if (titleFld.value === '' || urlFld.value === '') {
+titleField.addEventListener('keyup', function() {
+  if (titleField.value === '' || urlField.value === '') {
     submitBtn.disabled = true;
     errorMessage.innerText = "Please fill out both fields";
   } else {
